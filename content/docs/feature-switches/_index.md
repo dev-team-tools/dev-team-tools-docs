@@ -41,23 +41,6 @@ But how do you stop a user from seeing or experiencing half finished code / feat
 
 That's where Feature Switches come in. By allowing you to control the code flow via dev-team-tools, you can decide which users get to experience your new feature, and which ones don't.
 
-
-## Creating your first switch
-![Creating a Feature Switch](/create-feature-switch-screenshot.png)
-To create your first switch, first you must ensure you've created an [environment](https://docs.dev-team-tools.com/docs/getting-started/environments/#creating).
-
-There are then 4 sections that need to be filled out:
-1. **Switch Name**: the human readble name for a switch. We tend to go for something like "{product name} - Enable {feature name}" e.g. "User Profile Page - Enable profile photo upload".
-2. **Switch Key**: this key must be unique, and will be used within your code base. We recommend making it a positive name, so something like "profilePhotoUploadEnabled", so in your code it flows better - `if(profilePhotoUploadEnabled)`. _**This cannot be changed**_.
-3. **Description**: a short description of the switch. Purely to help your team understand what this switch is for.
-4. **Default value**: A boolean value of the switch.
-
-Once your switch is created, you can start to use it via the API. Check out the SDK for more info as to how to access your switches from within your application.
-
-## A feature switch
-
-![A single feature switch](/a-feature-switch-screenshot.png)
-
 ## Updating a feature switch
 You can edit lots of aspects about a switch, from it's description to how it behaves based on a number of factors.
 ![Edit a feature switch](/edit-feature-switch-screenshot.png)
