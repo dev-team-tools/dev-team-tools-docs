@@ -49,7 +49,7 @@ Take a copy of the token, as we'll need it to authenticate the library.
 
 ### Programatically requesting a switch
 
-There are a number of ways to request your switches value. Check out the [SDK]({{<relref "./SDK">}}) section for more specific implementation details for different languages.
+There are a number of ways to request your switches value. Check out the [SDK]({{<relref "./sdk">}}) section for more specific implementation details for different languages.
 
 Now we've created the switch, we need to reference it in our code:
 
