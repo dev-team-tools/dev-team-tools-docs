@@ -6,7 +6,7 @@ title = 'Frontend Feature Switches'
 
 If you have a [Single Page App (SPA)](https://en.wikipedia.org/wiki/Single-page_application) you should **avoid directly access deav-team-tools feature switches** from your front end application. The main reason being you'd expose your API key to the world.
 
-Instead, we recommend you **proxy** your request to dev-team-tools, and return to your Frontend ONLY what you need.
+Instead, we recommend you **proxy** your request to dev-team-tools, and return to your Frontend only what you need.
 
 ### Proxying requests
 To effectively proxy feature switches, we recommend you create a new API controller within your web application.

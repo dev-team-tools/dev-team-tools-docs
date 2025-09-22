@@ -5,6 +5,10 @@ weight = 100
 +++
 
 # Feature Switches
+Welcome to dev-team-tools feature switches! In this doc, you'll find information as to what feature switches are.
+If you just want to get started, jump to [creating your first switch]( {{< relref "./creating-your-first-switch.md" >}})
+
+## About
 Feature Switches (sometimes called Feature Toggles or Feature Flags) have been around for a while now. If you're not familier with them, we very much recommend reading [Feature Toggles (aka Feature Flags)](https://martinfowler.com/articles/feature-toggles.html), as it does a great job of outlining the _why_.
 
 The TL;DR is:
@@ -41,30 +45,6 @@ But how do you stop a user from seeing or experiencing half finished code / feat
 
 That's where Feature Switches come in. By allowing you to control the code flow via dev-team-tools, you can decide which users get to experience your new feature, and which ones don't.
 
-## Updating a feature switch
-You can edit lots of aspects about a switch, from it's description to how it behaves based on a number of factors.
-![Edit a feature switch](/edit-feature-switch-screenshot.png)
+## Next steps
 
-### Description
-You can edit the description of a Feature Switch here. As stated above, the **key** cannot be updated.
-![Edit a description](/edit-description-feature-switch-screenshot.png)
-
-### Context rules
-
-![Finished context rule](/add-context-rule-feature-switches-screenshot.png)
-![Finished context rule](/create-context-rule-feature-switches-screenshot.png)
-![Finished context rule](/finished-context-rule-feature-switch-screenshot.png)
-
-### Default rule & Percentage rollout
-
-![Default rule](/edit-default-rule-feature-switch-screenshot.png)
-![Percetnage roll out](/edit-percentage-rollout-default-rule-feature-switch-screenshot.png)
-
-
-## Copying a Feature Switch
-You can copy a feature switch to another environment. This is useful when you're working with multiple environments.
-![Copy a feature switch](/copy-feature-switch-screenshot.png)
-
-## Deleting a Feature Switch
-Once you're finished with a feature switch, you can delete it. This action cannot be undone.
-![Delete a feature switch dialog](/delete-feature-switch-screenshot.png)
+Now you know a little more about switches, go ahead and create your [first switch!]({{<relref "./creating-your-first-switch.md">}})

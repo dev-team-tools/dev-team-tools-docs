@@ -1,18 +1,40 @@
 # Creating your first switch
 
-In this tutorial, we're going to create a basic feature switch and use it in a project.
-In this example, we'll be using NodeJS.
-
-## The scenario
-We've decided to implement a new User profile photo upload feature. But we want to make sure we can build, test, iterate, and show stake holders before progressively rolling out the feature to the general public.
+In this doc, we'll go through how you can create your first, simple switch. A switch that will return always `true` or `false` depending on what you set the `Default Value` to.
 
 ## Prerequisite
-To create your first switch, first you must ensure you've created an [environment](https://docs.dev-team-tools.com/docs/getting-started/environments/#creating).
+To create your first switch, first you must ensure you've created at least one [environment]({{<relref "../environments.md">}}).
 
-For this example, we're going to use an environment called `stage`.
+## Creating the feature switch
+Head to Dashboard, and select Feature Switches. Your default environment will be loaded. If that's the correct environment, then yay! If it's not, use the drop down under the search bar to switch to the environment you want to use.
 
+Click create, and you'll be presented with a Create page:
+
+![Create a feature switch](/create-feature-switch-screenshot.png)
+
+There are then 5 sections that need to be filled out:
+1. **Switch Name**: the human readble name for a switch. We tend to go for something like "{product name} - Enable {feature name}" e.g. "User Profile Page - Enable profile photo upload".
+2. **Switch Key**: this key must be unique, and will be used within your code base. We recommend making it a positive name, so something like "profilePhotoUploadEnabled", so in your code it flows better - `if(profilePhotoUploadEnabled)`. _**This cannot be changed**_.
+3. **Description**: a short description of the switch. Purely to help your team understand what this switch is for.
+4. **Default value**: A boolean value of the switch.
+5. Which environments you'd like to save this switch to. By default, it'll create this switch in all environments. However, you can elect to not include an environment. _**Once saved this cannot be changed**_.
+
+For example, if we were to create a switch around a fake new feature like being able to upload a photo, we'd fill it out like so:
+1. Setting the **Switch Name** to "Enable photo upload"
+2. Setting the **Switch Key** to `photoUploadEnabled`
+3. Setting the **Description** to "Enables a user to upload a photo", or leave it blank
+4. Setting the **Default value** to `false`. We'll be changing this later
+5. We'll also leave the environments alone too, as we're happy for them to be created everywhere
+
+Hit the save button, and we'll be redirected to the newly created feature switch.
+
+![A single feature switch](/a-feature-switch-screenshot.png)
+
+You should see the name of your switch and the environment it's been created in.
+
+## Using it in code - the Backend
 ### Creating an API token
-First, we'll need to get hold of an API key. Head to [Settings](https://dev-team-tools.com/users/settings) and scroll down to "API tokens".
+First, we'll need to get hold of an API key. Head to [settings](https://dev-team-tools.com/users/settings) and scroll down to "API tokens".
 
 Create a new token, with both `Read Switch` and `List Switches` enabled and give it a name. For the sake of this tutorial, lets call it "Test Token".
 
@@ -20,36 +42,19 @@ Take a copy of the token, as we'll need it to authenticate the library.
 
 ![Create API token screenshot](/api-token-screenshot.png)
 
-## Creating the switch
+### Programatically requesting a switch
 
-![Creating a Feature Switch](/create-feature-switch-screenshot.png)
+There are a number of ways to request your switches value. Check out the [SDK]({{<relref "./SDK">}}) section for more specific implementation details for different languages.
 
-There are then 4 sections that need to be filled out:
-1. **Switch Name**: the human readble name for a switch. We tend to go for something like "{product name} - Enable {feature name}" e.g. "User Profile Page - Enable profile photo upload".
-2. **Switch Key**: this key must be unique, and will be used within your code base. We recommend making it a positive name, so something like "profilePhotoUploadEnabled", so in your code it flows better - `if(profilePhotoUploadEnabled)`. _**This cannot be changed**_.
-3. **Description**: a short description of the switch. Purely to help your team understand what this switch is for.
-4. **Default value**: A boolean value of the switch.
-
-For this example, we're going to create a switch around a fake new feature - being able to upload a photo.
-Lets create our first switch by:
-1. Setting the **Switch Name** to "User Profile Page - Enable profile photo upload"
-2. Setting the **Switch Key** to `profilePhotoUploadEnabled`
-3. Setting the **Description** to "Enables a user to upload a photo", or leave it blank
-4. Setting the **Default value** to `false`. We'll be changing this later.
-
-![A single feature switch](/a-feature-switch-screenshot.png)
-
-## Using it in code - the Backend
-There are a number of ways to request your switches value. Check out the SDK section for more specific implementation details for different languages.
-
-Now we've created the switch, we need to reference it in our code
+Now we've created the switch, we need to reference it in our code:
 
 ```JavaScript
-const manager = new FeatureSwitchManager("{your-api-key-here}", "stage");
+// can set to either stage or dev for this example, as this switch was created in all environments
+const manager = new FeatureSwitchManager("{your-api-key-here}", "dev");
 
-export const uploadUserPhoto = async (request: UserPhotoRequest) => {
+export const uploadPhoto = async (request) => {
 
-  const result = await manager.getSwitchValue("profilePhotoUploadEnabled");
+  const result = await manager.getSwitchValue("photoUploadEnabled");
 
   if(result.value) {
     // Fill in with photo upload code
@@ -62,9 +67,8 @@ As you can see, we've created the manager (create one of these, and reuse it thr
 Then, if that switch returns `true`, we then handle the upload. If it's set to `false`, it does nothing.
 
 We can now "ship" this code, as the switch is `false` for every user.
-Once we're happy with the code, we can set it to `true`, and it'll suddenly becomes available to everyone.
+Once we're happy with the code, we can set it to `true`, and it'll become available to everyone!
 
-## Front end feature switches
-The above is a pretty simple example of a feature switch grounded in reality. However, a feature like this wouldn't really work without a Front End aspect.
+And that's it! You've created your first feature switch.
 
-To find out more about how to access your Feature Switches via the Frontend, check out these documents.
+While a simple "binary" switch can be useful this just scratches the surface of what you can do with Feature Switches. Check out [Advance Usage]({{<relref "./advance-usage">}}) to find out more.
