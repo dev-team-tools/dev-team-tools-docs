@@ -1,3 +1,8 @@
++++
+title = 'Creating your first switch'
+weight = 20
++++
+
 # Creating your first switch
 
 In this doc, we'll go through how you can create your first, simple switch. A switch that will return always `true` or `false` depending on what you set the `Default Value` to.
@@ -14,7 +19,7 @@ Click create, and you'll be presented with a Create page:
 
 There are then 5 sections that need to be filled out:
 1. **Switch Name**: the human readble name for a switch. We tend to go for something like "{product name} - Enable {feature name}" e.g. "User Profile Page - Enable profile photo upload".
-2. **Switch Key**: this key must be unique, and will be used within your code base. We recommend making it a positive name, so something like "profilePhotoUploadEnabled", so in your code it flows better - `if(profilePhotoUploadEnabled)`. _**This cannot be changed**_.
+2. **Switch Key**: this key must be unique, and will be used within your code base. We recommend making it a positive name, so something like "photoUploadEnabled", so in your code it flows better - `if(photoUploadEnabled)`. _**This cannot be changed**_.
 3. **Description**: a short description of the switch. Purely to help your team understand what this switch is for.
 4. **Default value**: A boolean value of the switch.
 5. Which environments you'd like to save this switch to. By default, it'll create this switch in all environments. However, you can elect to not include an environment. _**Once saved this cannot be changed**_.
