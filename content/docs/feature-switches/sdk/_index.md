@@ -1,40 +1,11 @@
 +++
-# bookCollapseSection= true
+title = 'SDK'
 weight= 100
 +++
 # SDK
 
-## Node SDK
-You can find the [Node SDK on npm](https://www.npmjs.com/package/@dev-team-tool/feature-switches).
-Implementation details can be found on the libraries [GitHub](https://github.com/dev-team-tools/feature-switches-node).
+We currently have two implementations of the SDK:
+- [JavaScript & Node]({{< relref "./javascript & node.md" >}})
+- [Http / ReST]({{< relref "./http-rest.md" >}})
 
-### Example
-```javascript
-const manager = new FeatureSwitchManager("some-api-key", "stage");
-
-const result = await manager.getSwitchValue("devToolsEnabled");
-
-if(result.value) {
-  // switch is on
-} else {
-  // switch is off
-}
-
-const switches = await manager.getSwitches();
-
-const found = switches.find(fs => fs.key === 'devToolsEnabled');
-
-if(found && found.value) {
-  // switch is on
-}
-```
-
-## Java SDK
-Implementation coming soon...
-
-## HTTP/REST
-Backing the SDK is our Rest API.
-
-The basics of the API requets are:
-
-`GET or POST https://feature-switches.harry-9ce.workers.dev/{env}/{key}`
+If you'd like to create an SDK for Feature Switches that isn't already listed above, please get in [contact]({{< relref "contact" >}}) with is. We'd love to sponsor you in doing so.

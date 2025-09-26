@@ -39,13 +39,9 @@ You should see the name of your switch and the environment it's been created in.
 
 ## Using it in code - the Backend
 ### Creating an API token
-First, we'll need to get hold of an API key. Head to [settings](https://dev-team-tools.com/users/settings) and scroll down to "API tokens".
+Before you can do anything here, you need to have generated an [Api Token]({{<ref "../../api-tokens.md">}}).
 
-Create a new token, with both `Read Switch` and `List Switches` enabled and give it a name. For the sake of this tutorial, lets call it "Test Token".
-
-Take a copy of the token, as we'll need it to authenticate the library.
-
-![Create API token screenshot](/api-token-screenshot.png)
+When you create a token, make sure it has  both `Read Switch` and `List Switches` enabled and give it a name. For the sake of this tutorial, lets call it "Test Token".
 
 ### Programatically requesting a switch
 
