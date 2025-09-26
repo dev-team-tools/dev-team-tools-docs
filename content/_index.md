@@ -1,14 +1,9 @@
 # dev-team-tools
 
-Welcome to the dev-team-tool's documentation! Here you'll find everything you need to get started.
+Welcome to dev-team-tools!
 
-If you have any questions, let us know via our socials or via email.
+In these pages you'll find everything you need to get started! We hope you enjoy using dev-team-tools as much we've enjoyed building it.
 
-If you have any issues, please raise it on our GitHub or via email.
+If you have any questions or issues please [contact us]({{<ref "contact">}}). or raise an issue on our [Github](https://github.com/dev-team-tools/).
 
-Happy developing!
-
-## Contact Us
-- Mastodon
-- BlueSky
-- info@dev-team-tools.com
+**Happy programming**

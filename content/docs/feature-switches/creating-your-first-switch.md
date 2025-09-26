@@ -8,7 +8,7 @@ weight = 20
 In this doc, we'll go through how you can create your first, simple switch. A switch that will return always `true` or `false` depending on what you set the `Default Value` to.
 
 ## Prerequisite
-To create your first switch, first you must ensure you've created at least one [environment]({{<relref "../environments.md">}}).
+To create your first switch, first you must ensure you've created at least one [environment]({{<ref "../environments.md">}}).
 
 ## Creating the feature switch
 Head to Dashboard, and select Feature Switches. Your default environment will be loaded. If that's the correct environment, then yay! If it's not, use the drop down under the search bar to switch to the environment you want to use.
@@ -49,7 +49,7 @@ Take a copy of the token, as we'll need it to authenticate the library.
 
 ### Programatically requesting a switch
 
-There are a number of ways to request your switches value. Check out the [SDK]({{<relref "./sdk">}}) section for more specific implementation details for different languages.
+There are a number of ways to request your switches value. Check out the [SDK]({{<ref "./sdk">}}) section for more specific implementation details for different languages.
 
 Now we've created the switch, we need to reference it in our code:
 
@@ -76,4 +76,4 @@ Once we're happy with the code, we can set it to `true`, and it'll become availa
 
 And that's it! You've created your first feature switch.
 
-While a simple "binary" switch can be useful this just scratches the surface of what you can do with Feature Switches. Check out [Advance Usage]({{<relref "./advance-usage">}}) to find out more.
+While a simple "binary" switch can be useful this just scratches the surface of what you can do with Feature Switches. Check out [Advance Usage]({{<ref "./advance-usage">}}) to find out more.
