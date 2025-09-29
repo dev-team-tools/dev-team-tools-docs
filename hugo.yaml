@@ -28,6 +28,9 @@ menu:
     - name: "Github"
       url: "https://github.com/dev-team-tools/"
       weight: 30
+    - name: "dev-team-tools"
+      url: "https://dev-team-tools.com"
+      weight: 40
 
 params:
   # (Optional, default light) Sets color theme: light, dark or auto.

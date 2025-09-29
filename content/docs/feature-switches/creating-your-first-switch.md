@@ -39,7 +39,7 @@ You should see the name of your switch and the environment it's been created in.
 
 ## Using it in code - the Backend
 ### Creating an API token
-Before you can do anything here, you need to have generated an [Api Token]({{<ref "../../api-tokens.md">}}).
+Before you can do anything here, you need to have generated an [Api Token]({{<ref "../api-tokens.md">}}).
 
 When you create a token, make sure it has  both `Read Switch` and `List Switches` enabled and give it a name. For the sake of this tutorial, lets call it "Test Token".
 
