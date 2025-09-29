@@ -11,7 +11,7 @@ In this doc, we'll go through how you can create your first, simple switch. A sw
 To create your first switch, first you must ensure you've created at least one [environment]({{<ref "../environments.md">}}).
 
 ## Creating the feature switch
-Head to Dashboard, and select Feature Switches. Your default environment will be loaded. If that's the correct environment, then yay! If it's not, use the drop down under the search bar to switch to the environment you want to use.
+Head to Dashboard, and select Feature Switches. Your default environment will be loaded. The environment doesn't matter, as the switch will be create / duplicated across all environments.
 
 Click create, and you'll be presented with a Create page:
 
@@ -22,20 +22,17 @@ There are then 5 sections that need to be filled out:
 2. **Switch Key**: this key must be unique, and will be used within your code base. We recommend making it a positive name, so something like "photoUploadEnabled", so in your code it flows better - `if(photoUploadEnabled)`. _**This cannot be changed**_.
 3. **Description**: a short description of the switch. Purely to help your team understand what this switch is for.
 4. **Default value**: A boolean value of the switch.
-5. Which environments you'd like to save this switch to. By default, it'll create this switch in all environments. However, you can elect to not include an environment. _**Once saved this cannot be changed**_.
 
 For example, if we were to create a switch around a fake new feature like being able to upload a photo, we'd fill it out like so:
 1. Setting the **Switch Name** to "Enable photo upload"
 2. Setting the **Switch Key** to `photoUploadEnabled`
 3. Setting the **Description** to "Enables a user to upload a photo", or leave it blank
 4. Setting the **Default value** to `false`. We'll be changing this later
-5. We'll also leave the environments alone too, as we're happy for them to be created everywhere
 
 Hit the save button, and we'll be redirected to the newly created feature switch.
 
 ![A single feature switch](/a-feature-switch-screenshot.png)
 
-You should see the name of your switch and the environment it's been created in.
 
 ## Using it in code - the Backend
 ### Creating an API token
@@ -50,7 +47,7 @@ There are a number of ways to request your switches value. Check out the [SDK]({
 Now we've created the switch, we need to reference it in our code:
 
 ```JavaScript
-// can set to either stage or dev for this example, as this switch was created in all environments
+// Can set whatever environment you have - the switch exists in all of them.
 const manager = new FeatureSwitchManager("{your-api-key-here}", "dev");
 
 export const uploadPhoto = async (request) => {
