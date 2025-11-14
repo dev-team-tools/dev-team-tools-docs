@@ -25,13 +25,17 @@ If you **don't** set any Content-Type header, you'll get our JSON response.
 
 Example respone:
 ```json
-[
-  {
-    "key": "some.example.key",
-    "value": "hello"
-  }
-]
+{
+  "parameters": [
+    {
+      "key": "some.example.key",
+      "value": "hello"
+    }
+  ], 
+  "storedAt": 1762717643.79
+}
 ```
+You'll also get some additional meta data around the last time this data was updated. 
 
 #### JSON
 You can also request the response as a nested JSON. 

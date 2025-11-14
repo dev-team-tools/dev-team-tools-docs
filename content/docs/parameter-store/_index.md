@@ -38,12 +38,15 @@ If you **don't** set any Content-Type header, you'll get our JSON response.
 
 Example respone:
 ```json
-[
-  {
-    "key": "some.example.key",
-    "value": "hello"
-  }
-]
+{
+  "parameters": [
+    {
+      "key": "some.example.key",
+      "value": "hello"
+    }
+  ], 
+  "storedAt": 1762717643.79
+}
 ```
 
 #### JSON
