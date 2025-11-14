@@ -1,6 +1,6 @@
 +++
 title='Contact us'
-weight = 110
+weight = 120
 
 +++
 # Contact Us

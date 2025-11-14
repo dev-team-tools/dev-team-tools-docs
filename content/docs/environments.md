@@ -28,19 +28,15 @@ For example if you have defined a "stage" environment and set it to default, thi
 Setting a colour has no real effect on the system, except making it easier to tell which environment you're currently acting within. It's recomended you pick different colours for each environment.
 
 ## Managing
-
 You can [manage your environments](https://dev-team-tools.com/apps/environments) at any time.
 
 ![List of environments](/list-environments-screenshot.png)
 
 ### Edit
-
 ![List of environments](/edit-environment-screenshot.png)
 You can:
 - edit the colour
 - set if it's the default environment
-
-
 
 ### Deleting an evironment
 At time of writing, it's not possible to remove an environment. Please [contact us]({{<ref "contact">}}) if you'd like to delete one.
