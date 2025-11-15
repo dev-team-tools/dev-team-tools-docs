@@ -131,7 +131,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Dev-Team-Tools. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://dev-team-tools.com">Dev-Team-Tools</a>. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
