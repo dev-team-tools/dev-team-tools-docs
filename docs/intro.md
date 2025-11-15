@@ -12,4 +12,4 @@ In these pages you'll find everything you need to get started! We hope you enjoy
 
 If you have any questions or issues please contact us, or raise an issue on our [Github](https://github.com/dev-team-tools/).
 
-**Happy programming**
+**Happy programming!**
