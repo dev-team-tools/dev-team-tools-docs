@@ -1,11 +1,25 @@
-# dev-team-tools-docs
-This is the documentation website. It uses [Hugo](https://gohugo.io/) as the state site generator.
+# Dev-Team-Tools documentation
 
-## Requirements
-- [Hugo 0.146 or higher](https://gohugo.io/installation/)
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## Running
-- `hugo server --minify --theme hugo-book`
+## Installation
 
-## Contributing
-Currently not accepting any PR's, but if there are any issues please [raise an issue](https://github.com/dev-team-tools/dev-team-tools-docs/issues).
+```bash
+npm install 
+```
+
+## Local Development
+
+```bash
+npm start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+## Build
+
+```bash
+npm build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.

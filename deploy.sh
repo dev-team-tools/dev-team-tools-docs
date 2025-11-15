@@ -1,4 +1,4 @@
-hugo && aws s3 sync public/ s3://docs-dev-team-tools/ --delete
+npm build && aws s3 sync build/ s3://docs-dev-team-tools/ --delete --profile personal
 
 echo "Sending message to service-log"
 
