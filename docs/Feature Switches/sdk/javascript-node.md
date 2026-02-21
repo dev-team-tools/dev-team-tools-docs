@@ -1,5 +1,5 @@
 # JavaScript & Node
-You can find the [Node SDK on npm](https://www.npmjs.com/package/@dev-team-tool/feature-switches).
+You can find the [Node SDK on npm](https://www.npmjs.com/package/@dev-team-tool/feature-switches-node).
 Implementation details can be found on the libraries [GitHub](https://github.com/dev-team-tools/feature-switches-node).
 
 ### Example
