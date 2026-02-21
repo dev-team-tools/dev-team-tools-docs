@@ -91,7 +91,7 @@ const config: Config = {
           items: [
             {
               label: "Email",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              href: "mailto:info@dev-team-tools.com",
             },
 
             {
@@ -105,11 +105,11 @@ const config: Config = {
           items: [
             {
               label: "Mastodon",
-              href: "https://mstdn.social/@hazz223",
+              href: "https://mastodon.social/@dev_team_tools",
             },
             {
               label: "Bluesky",
-              href: "https://bsky.app/profile/harrywinser.com",
+              href: "https://bsky.app/profile/dev-team-tools.bsky.social",
             },
           ],
         },
